@@ -1,0 +1,838 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://promsns.org/def/agr", "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning", "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://bim.aalto.fi/DiCtion/Ontology", "http://www.w3.org/2001/XMLSchema", "http://www.w3.org/2006/time" ],
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning",
+    "version" : "0.8",
+    "comments" : {
+      "en" : "The construction planning ontology is one module of DiCtion Shared Situation Awareness ontology that refers the collection of concepts and relationships that are relevant with the the construction planning process. The construction planning process is activity-oriented that focus on what kind of conditions an activity has and what kinds of resource the activity is requiring."
+    },
+    "other" : {
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.8",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 18,
+    "objectPropertyCount" : 12,
+    "datatypePropertyCount" : 3,
+    "individualCount" : 0
+  },
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "17",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:equivalentClass"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "46",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "instances" : 0,
+    "union" : [ "1", "2" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.w3.org/2006/time#Interval",
+    "baseIri" : "http://www.w3.org/2006/time",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Interval"
+    },
+    "subClasses" : [ "4" ],
+    "attributes" : [ "external" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ObjectTimeInterval",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ObjectTimeInterval"
+    },
+    "subClasses" : [ "5", "6" ],
+    "attributes" : [ "external" ],
+    "id" : "4",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#InformationEntity",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InformationEntity"
+    },
+    "subClasses" : [ "9" ],
+    "id" : "7",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/AllocatedTo",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AllocatedTo"
+    },
+    "attributes" : [ "external" ],
+    "id" : "10",
+    "superClasses" : [ "5" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Condition",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Condition"
+    },
+    "subClasses" : [ "10" ],
+    "attributes" : [ "external" ],
+    "id" : "5",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "17",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Resource",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "attributes" : [ "external" ],
+    "id" : "1",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://promsns.org/def/agr#Requirement",
+    "equivalent" : [ "2" ],
+    "baseIri" : "http://promsns.org/def/agr",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Requirement"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/DomainObject",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DomainObject"
+    },
+    "subClasses" : [ "7", "1", "6" ],
+    "attributes" : [ "external" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Capacity",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Capacity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Requirement",
+    "equivalent" : [ "30" ],
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Requirement"
+    },
+    "subClasses" : [ "19", "40" ],
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Activity",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity"
+    },
+    "attributes" : [ "external" ],
+    "id" : "6",
+    "superClasses" : [ "8", "4" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/CapabilityRequirement",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CapabilityRequirement"
+    },
+    "attributes" : [ "external" ],
+    "id" : "40",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ActivityType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActivityType"
+    },
+    "attributes" : [ "external" ],
+    "id" : "46",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ResourceType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceType"
+    },
+    "attributes" : [ "external" ],
+    "id" : "14",
+    "superClasses" : [ "56" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Event",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event"
+    },
+    "attributes" : [ "external" ],
+    "id" : "9",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ResourceTypeRequirement",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceTypeRequirement"
+    },
+    "attributes" : [ "external" ],
+    "id" : "19",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Type",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Type"
+    },
+    "subClasses" : [ "46", "14", "29" ],
+    "attributes" : [ "external" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/CapabilityType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CapabilityType"
+    },
+    "attributes" : [ "external" ],
+    "id" : "29",
+    "superClasses" : [ "56" ]
+  } ],
+  "property" : [ {
+    "id" : "13",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "15",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "18",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "21",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "23",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "24",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "28",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "31",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "37",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "38",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "39",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "41",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "42",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "43",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "45",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "47",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "48",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "49",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "50",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "53",
+    "type" : "owl:allValuesFrom"
+  }, {
+    "id" : "54",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "74",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "13"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasCapability",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasCapability"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "15"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "19",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "18"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasUnit",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasUnit"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasRequiredAmount",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "22",
+    "label" : {
+      "IRI-based" : "hasRequiredAmount"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasWorkRate",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "hasWorkRate"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#precedes",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "precedes"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "reflexive" ],
+    "id" : "25"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasCapability",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "16",
+    "label" : {
+      "IRI-based" : "hasCapability"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "26"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/isDerivedfrom",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isDerivedfrom"
+    },
+    "domain" : "5",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "27"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "16",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "28"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasObject",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasObject"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasUnit",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasUnit"
+    },
+    "domain" : "0",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#requires",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "requires"
+    },
+    "domain" : "6",
+    "attributes" : [ "object" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasWorkRate",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "hasWorkRate"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "35"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasUnit",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "36",
+    "label" : {
+      "IRI-based" : "hasUnit"
+    },
+    "domain" : "16",
+    "attributes" : [ "datatype", "external", "someValues" ],
+    "id" : "37"
+  }, {
+    "range" : "1",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "38"
+  }, {
+    "range" : "19",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "39"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "40",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#precedes",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning",
+    "range" : "6",
+    "label" : {
+      "IRI-based" : "precedes"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "allValues", "reflexive" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/executionCondition",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "executionCondition"
+    },
+    "superproperty" : [ "44" ],
+    "domain" : "6",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasType",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "hasType"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "external", "allValues" ],
+    "id" : "45"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/addEffect",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "addEffect"
+    },
+    "superproperty" : [ "44" ],
+    "domain" : "6",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "47"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/deleteEffect",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "deleteEffect"
+    },
+    "superproperty" : [ "44" ],
+    "domain" : "6",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "48"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/Precondition",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "Precondition"
+    },
+    "superproperty" : [ "44" ],
+    "domain" : "6",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "49"
+  }, {
+    "range" : "5",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasRequiredAmount",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasRequiredAmount"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "51"
+  }, {
+    "range" : "1",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#requires",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "requires"
+    },
+    "domain" : "6",
+    "attributes" : [ "object", "allValues" ],
+    "id" : "53"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/completionCondition",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "completionCondition"
+    },
+    "superproperty" : [ "44" ],
+    "domain" : "6",
+    "attributes" : [ "object", "external", "someValues" ],
+    "id" : "54"
+  }, {
+    "range" : "56",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "range" : "56",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "57"
+  }, {
+    "range" : "56",
+    "domain" : "46",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "58"
+  }, {
+    "range" : "2",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/hasCondition",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasCondition"
+    },
+    "domain" : "6",
+    "subproperty" : [ "60", "61", "62", "63", "64" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://bim.aalto.fi/DiCtion/Ontology/isDerivedfrom",
+    "baseIri" : "http://bim.aalto.fi/DiCtion/Ontology",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "isDerivedfrom"
+    },
+    "domain" : "5",
+    "attributes" : [ "object", "external" ],
+    "id" : "65"
+  }, {
+    "range" : "2",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "67"
+  }, {
+    "range" : "5",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "range" : "8",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "8",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "70"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "range" : "3",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "72"
+  }, {
+    "range" : "7",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "74"
+  } ]
+}

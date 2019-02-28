@@ -1,0 +1,284 @@
+@prefix : <http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning> .
+
+<http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning> rdf:type owl:Ontology ;
+                                                             owl:versionIRI <http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning/0.8> ;
+                                                             rdfs:comment "The construction planning ontology is one module of DiCtion Shared Situation Awareness ontology that refers the collection of concepts and relationships that are relevant with the the construction planning process. The construction planning process is activity-oriented that focus on what kind of conditions an activity has and what kinds of resource the activity is requiring."@en ;
+                                                             owl:versionInfo 0.8 .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Precondition
+<http://bim.aalto.fi/DiCtion/Ontology/Precondition> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://bim.aalto.fi/DiCtion/Ontology/hasCondition> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/addEffect
+<http://bim.aalto.fi/DiCtion/Ontology/addEffect> rdf:type owl:ObjectProperty ;
+                                                 rdfs:subPropertyOf <http://bim.aalto.fi/DiCtion/Ontology/hasCondition> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/completionCondition
+<http://bim.aalto.fi/DiCtion/Ontology/completionCondition> rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf <http://bim.aalto.fi/DiCtion/Ontology/hasCondition> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/deleteEffect
+<http://bim.aalto.fi/DiCtion/Ontology/deleteEffect> rdf:type owl:ObjectProperty ;
+                                                    rdfs:subPropertyOf <http://bim.aalto.fi/DiCtion/Ontology/hasCondition> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/executionCondition
+<http://bim.aalto.fi/DiCtion/Ontology/executionCondition> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf <http://bim.aalto.fi/DiCtion/Ontology/hasCondition> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasCapability
+<http://bim.aalto.fi/DiCtion/Ontology/hasCapability> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Resource> ;
+                                                     rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Capacity> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasCondition
+<http://bim.aalto.fi/DiCtion/Ontology/hasCondition> rdf:type owl:ObjectProperty ;
+                                                    rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Activity> ;
+                                                    rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Condition> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasObject
+<http://bim.aalto.fi/DiCtion/Ontology/hasObject> rdf:type owl:ObjectProperty .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasType
+<http://bim.aalto.fi/DiCtion/Ontology/hasType> rdf:type owl:ObjectProperty .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/isDerivedfrom
+<http://bim.aalto.fi/DiCtion/Ontology/isDerivedfrom> rdf:type owl:ObjectProperty ;
+                                                     rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Condition> ;
+                                                     rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Event> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#precedes
+:precedes rdf:type owl:ObjectProperty ,
+                   owl:ReflexiveProperty ;
+          rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Activity> ;
+          rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Activity> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#requires
+:requires rdf:type owl:ObjectProperty ;
+          rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Activity> ;
+          rdfs:range <http://bim.aalto.fi/DiCtion/Ontology/Requirement> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasRequiredAmount
+<http://bim.aalto.fi/DiCtion/Ontology/hasRequiredAmount> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Requirement> ;
+                                                         rdfs:range xsd:double .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasUnit
+<http://bim.aalto.fi/DiCtion/Ontology/hasUnit> rdf:type owl:DatatypeProperty ;
+                                               rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Requirement> ,
+                                                           <http://bim.aalto.fi/DiCtion/Ontology/Resource> ;
+                                               rdfs:range xsd:string .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/hasWorkRate
+<http://bim.aalto.fi/DiCtion/Ontology/hasWorkRate> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:domain <http://bim.aalto.fi/DiCtion/Ontology/Capacity> ;
+                                                   rdfs:range xsd:double .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Activity
+<http://bim.aalto.fi/DiCtion/Ontology/Activity> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> ,
+                                                                <http://bim.aalto.fi/DiCtion/Ontology/ObjectTimeInterval> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/Precondition> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Condition>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/addEffect> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Condition>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/completionCondition> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Condition>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/deleteEffect> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Condition>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/executionCondition> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Condition>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasType> ;
+                                                                  owl:allValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/ActivityType>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :precedes ;
+                                                                  owl:allValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Activity>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty :requires ;
+                                                                  owl:allValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Requirement>
+                                                                ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/ActivityType
+<http://bim.aalto.fi/DiCtion/Ontology/ActivityType> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Type> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/AllocatedTo
+<http://bim.aalto.fi/DiCtion/Ontology/AllocatedTo> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Condition> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/CapabilityRequirement
+<http://bim.aalto.fi/DiCtion/Ontology/CapabilityRequirement> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Requirement> ,
+                                                                             [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasType> ;
+                                                                               owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/CapabilityType>
+                                                                             ] ;
+                                                             owl:disjointWith <http://bim.aalto.fi/DiCtion/Ontology/ResourceTypeRequirement> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/CapabilityType
+<http://bim.aalto.fi/DiCtion/Ontology/CapabilityType> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Type> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Capacity
+<http://bim.aalto.fi/DiCtion/Ontology/Capacity> rdf:type owl:Class ;
+                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasType> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/CapabilityType>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasUnit> ;
+                                                                  owl:someValuesFrom xsd:string
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasWorkRate> ;
+                                                                  owl:someValuesFrom xsd:double
+                                                                ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Condition
+<http://bim.aalto.fi/DiCtion/Ontology/Condition> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/ObjectTimeInterval> ,
+                                                                 [ rdf:type owl:Restriction ;
+                                                                   owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/isDerivedfrom> ;
+                                                                   owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Event>
+                                                                 ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/DomainObject
+<http://bim.aalto.fi/DiCtion/Ontology/DomainObject> rdf:type owl:Class .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Event
+<http://bim.aalto.fi/DiCtion/Ontology/Event> rdf:type owl:Class ;
+                                             rdfs:subClassOf :InformationEntity .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/ObjectTimeInterval
+<http://bim.aalto.fi/DiCtion/Ontology/ObjectTimeInterval> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://www.w3.org/2006/time#Interval> ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasObject> ;
+                                                                            owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/DomainObject>
+                                                                          ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Requirement
+<http://bim.aalto.fi/DiCtion/Ontology/Requirement> rdf:type owl:Class ;
+                                                   owl:equivalentClass <http://promsns.org/def/agr#Requirement> ;
+                                                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasRequiredAmount> ;
+                                                                     owl:someValuesFrom xsd:double
+                                                                   ] ,
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasUnit> ;
+                                                                     owl:someValuesFrom xsd:string
+                                                                   ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Resource
+<http://bim.aalto.fi/DiCtion/Ontology/Resource> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasCapability> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/Capacity>
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasType> ;
+                                                                  owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/ResourceType>
+                                                                ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/ResourceType
+<http://bim.aalto.fi/DiCtion/Ontology/ResourceType> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Type> .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/ResourceTypeRequirement
+<http://bim.aalto.fi/DiCtion/Ontology/ResourceTypeRequirement> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/Requirement> ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://bim.aalto.fi/DiCtion/Ontology/hasType> ;
+                                                                                 owl:someValuesFrom <http://bim.aalto.fi/DiCtion/Ontology/ResourceType>
+                                                                               ] .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/Type
+<http://bim.aalto.fi/DiCtion/Ontology/Type> rdf:type owl:Class .
+
+
+###  http://bim.aalto.fi/DiCtion/Ontology/ConstructionPlanning#InformationEntity
+:InformationEntity rdf:type owl:Class ;
+                   rdfs:subClassOf <http://bim.aalto.fi/DiCtion/Ontology/DomainObject> .
+
+
+###  http://promsns.org/def/agr#Requirement
+<http://promsns.org/def/agr#Requirement> rdf:type owl:Class .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://bim.aalto.fi/DiCtion/Ontology/Activity>
+                <http://bim.aalto.fi/DiCtion/Ontology/Condition>
+                <http://bim.aalto.fi/DiCtion/Ontology/Resource>
+              )
+] .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
